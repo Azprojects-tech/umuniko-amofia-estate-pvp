@@ -1306,41 +1306,28 @@
             crossorigin=""></script>
     
     <script>
-        // External GeoJSON file path - Pineleaf Estate - Oranwezueaku PARCELS
+        // External GeoJSON file path - Umuniko Amofia Estate PARCELS
         // Loading from external file for better maintainability and reduced file size
         let subdivisionData = null;
         
         // Function to load external GeoJSON file
         async function loadGeoJSON() {
             try {
-                // Primary: Try absolute Windows path
-                const response = await fetch('C:\\Users\\Admin\\OneDrive\\Desktop\\PVP_Pineleaf Awka\\Oranwezu.geojson');
+                // Try relative path to subdivision_data.json
+                const response = await fetch('./subdivision_data.json');
                 if (!response.ok) {
                     throw new Error(`Failed to load GeoJSON: ${response.statusText}`);
                 }
                 subdivisionData = await response.json();
-                console.log('GeoJSON loaded successfully. Features:', subdivisionData.features.length);
+                console.log('✅ GeoJSON loaded successfully. Features:', subdivisionData.features.length);
                 initMap();
                 return subdivisionData;
             } catch (error) {
-                console.error('Error loading GeoJSON:', error);
-                // Fallback: Try relative path
-                try {
-                    const fallbackResponse = await fetch('./Oranwezu.geojson');
-                    if (!fallbackResponse.ok) {
-                        throw new Error('Fallback also failed');
-                    }
-                    subdivisionData = await fallbackResponse.json();
-                    console.log('GeoJSON loaded from fallback location');
-                    initMap();
-                    return subdivisionData;
-                } catch (fallbackError) {
-                    console.error('Error loading GeoJSON from fallback:', fallbackError);
-                    // Fallback failed - use empty feature collection and continue loading
-                    subdivisionData = {"type": "FeatureCollection", "name": "Oranwezu", "features": []};
-                    initMap();
-                    return subdivisionData;
-                }
+                console.error('❌ Error loading GeoJSON:', error);
+                // Fallback: use empty feature collection and continue loading
+                subdivisionData = {"type": "FeatureCollection", "name": "Umuniko Amofia", "features": []};
+                initMap();
+                return subdivisionData;
             }
         }
         
@@ -4828,7 +4815,7 @@ P003        | reserved  | 2025-08-27</pre>
                     <p><strong>Revenue Realization Rate:</strong> ${((revenueGenerated / totalPotentialRevenue) * 100).toFixed(1)}% (₦${revenueGenerated.toLocaleString()} / ₦${totalPotentialRevenue.toLocaleString()})</p>
                     <p><strong>Pipeline Conversion:</strong> ${reservedParcels.length > 0 ? `₦${revenueExpected.toLocaleString()} pending from ${reservedParcels.length} reserved parcels` : 'No reserved parcels'}</p>
                     <p><strong>Average Sale Value:</strong> ₦${soldParcels.length > 0 ? averageParcelPrice.toLocaleString() : '15,000,000'}</p>
-                    <p><strong>Remaining Market Value:</strong> ₦${remainingRevenuePotential.toLocaleString()} from ${299 - soldParcels.length - reservedParcels.length} available parcels</p>
+                    <p><strong>Remaining Market Value:</strong> ₦${remainingRevenuePotential.toLocaleString()} from ${99 - soldParcels.length - reservedParcels.length} available parcels</p>
                 </div>
                 
                 <div style="margin-top: 15px; text-align: center; color: #666; font-size: 12px;">

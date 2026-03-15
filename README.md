@@ -1,39 +1,40 @@
-# Pineleaf Estate - Oranwezueaku - Property Portal
+# Umuniko Amofia Estate - Property Portal
 
-Generated: 2026-01-30 23:48:32
+Generated: 2026-03-15
 
 ## Location
-Nibo - Awka
+Eha-Amufu Township, Enugu State
 
 ## Portal Data
-- Total Plots: 308
-- Portal ID: pineleaf_estate___oranwezueaku_portal
-- Google Sheet ID: 1U3uQZTBHWSYeML5BNI5chG0guaNJGdbrVNe81NakU6A
+- Total Plots: 100
+- Portal ID: umuniko_amofia_estate_portal
+- Google Sheet ID: 1fDTPcYIu6dRfydAiqoKs_pYsKh2xhtbHN7YUNsULEwA
 
 ## NEXT STEPS
 
-### 1. Share Google Sheet with Client
-- Go to Google Sheets → Your sheet
-- Click Share (top right)
-- Add client email
-- Give "Editor" permission
+### 1. Google Sheet Already Setup
+- Sheet: MASTER_TEMPLATE_DATA
+- Sheet Tab: UMUNIKO_AMOFIA_PARCELS
+- CSV data imported with all 100 parcels
 
 ### 2. Client Updates Data
 Client fills these columns:
-- Price
-- Phone
+- Price_Naira
+- Phone_Number
 - Status
 - Marketer
-- Display_As
+- Purchase_ID
 
 ### 3. Deploy to Netlify
 - Go to netlify.com
-- Drag this folder → instant live URL
-- Portal updates automatically
+- Create new site from Git
+- Connect GitHub repo
+- Portal deploys automatically
 
 ## Contact
-- WhatsApp: +2347031643793
-- Email: kingsleyugwuani@gmail.com
+- WhatsApp: +2347025005871
+- Email: info@azprojectslimited.com
+- Admin Password: Skillnet2026
 
 ---
-Created with PVP Generator | A&Z Projects Ltd
+Created with Parcel Vision Pro (PVP) | A&Z Projects Ltd
