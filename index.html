@@ -1946,7 +1946,7 @@
                     
                     userLocationMarker.bindPopup(`
                         <div class="parcel-popup">
-                            <h3 style="color: #ff0000;">?? Your Location</h3>
+                            <h3 style="color: #ff0000;">📍 Your Location</h3>
                             <p><strong>Latitude:</strong> ${lat.toFixed(6)}</p>
                             <p><strong>Longitude:</strong> ${lng.toFixed(6)}</p>
                             <p><em>Red pin shows your current location</em></p>
@@ -1957,14 +1957,14 @@
                     map.setView([lat, lng], Math.max(map.getZoom(), 16));
                     
                     // Reset button
-                    locationButton.textContent = '?? My Location';
+                    locationButton.textContent = '📍 My Location';
                     locationButton.disabled = false;
                     window.locationRequestInProgress = false;
                     
                     console.log('User located at:', lat, lng);
                 }, function(error) {
                     alert('Unable to get your location. Please enable location services.');
-                    locationButton.textContent = '?? My Location';
+                    locationButton.textContent = '📍 My Location';
                     locationButton.disabled = false;
                     window.locationRequestInProgress = false;
                 });
@@ -1983,7 +1983,7 @@
                     .setLatLng(map.getCenter())
                     .setContent(`
                         <div style="text-align: center; padding: 10px;">
-                            <h4 style="color: #2c5f3f; margin: 0 0 8px 0;">🏘️ Viewing Pineleaf Estate - Oranwezueaku</h4>
+                            <h4 style="color: #2c5f3f; margin: 0 0 8px 0;">🏘️ Viewing Umuniko Amofia Estate - Eha-Amufu</h4>
                             <p style="margin: 0; font-size: 12px;">Zoom out to see surrounding landmarks and roads</p>
                         </div>
                     `)
